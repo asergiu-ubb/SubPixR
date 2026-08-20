@@ -1,0 +1,27 @@
+# Core dependencies for training and running SubPixR. Install PyTorch separately
+# from https://pytorch.org/get-started/locally/ matching your CUDA version
+# before installing the rest.
+torch>=2.0
+torchvision>=0.15
+timm>=0.9
+numpy
+opencv-python
+pillow
+pandas
+tqdm
+matplotlib
+kornia
+h5py
+scipy
+
+# Optional. Logging during training (Linux only — set WANDB_API_KEY env var).
+wandb
+
+# TAP-Vid evaluation: official metrics depend on TF datasets.
+tensorflow>=2.10
+tensorflow_datasets
+mediapy
+
+# Synthetic-data generation only (skip if you just want to run eval):
+# pyrender
+# trimesh

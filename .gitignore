@@ -1,0 +1,35 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Local checkpoints and logs — but DO ship the released weights (37 MB, well
+# under GitHub's 100 MB limit) so the repo works out of the box.
+checkpoints/*.pth
+checkpoints/*.pt
+!checkpoints/best_model.pth
+*.log
+*.h5
+wandb/
+
+# Cloned third-party repos (clone them locally per the README, don't commit)
+co-tracker/
+locotrack/
+tapnet/
+glue-factory/
+LightGlue/
+SuperGluePretrainedNetwork/
+S2DNet-Minimal/
+patch2pix/
+COTR/
+caps/
+ml-aspanformer/
+
+# IDE
+.vscode/
+.idea/

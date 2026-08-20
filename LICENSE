@@ -1,0 +1,240 @@
+SubPixR — Licensing
+======================================================================
+
+Copyright 2026 The SubPixR Authors
+https://github.com/asergiu-ubb/SubPixR
+
+This repository is released under more than one set of terms, because the code
+and the trained model carry different obligations. In short:
+
+  SOURCE CODE            MIT License (Part A)
+                         Commercial use permitted.
+
+  MODEL WEIGHTS          PolyForm Noncommercial License 1.0.0 (Part B)
+                         Noncommercial research, teaching and personal use
+                         only. Commercial use is NOT permitted.
+
+  TWO EVALUATION FILES   Apache License 2.0, Copyright Google LLC (Part C)
+                         Not ours to relicense; their headers govern.
+
+Why the model is more restricted than the code: SubPixR was trained on
+synthetic images rendered from the Replica dataset and from Google Scanned
+Objects. The Replica Research Terms permit use "only in connection with a
+research or educational purpose that is non-commercial or not-for-profit in
+nature", and that restriction carries over to derivative works, including
+models trained on renders of the data. We therefore cannot grant commercial
+rights in the weights, and no one downstream can either. The source code
+contains none of those assets and is unencumbered.
+
+
+SCOPE — which terms apply to which files
+----------------------------------------------------------------------
+
+Part A (MIT) covers every file in this repository EXCEPT those listed under
+Parts B and C:
+
+    subpixr/, data/, eval/ (except the two files in Part C),
+    refiners_compared/, scripts/, train.py, requirements.txt, README.md
+
+Part B (PolyForm Noncommercial 1.0.0) covers the released trained model:
+
+    checkpoints/best_model.pth
+    checkpoints/config.json
+    any weights derived from them by fine-tuning or conversion
+
+Part C (Apache 2.0, Google LLC) covers:
+
+    eval/tapvid_metrics.py
+    eval/transforms.py
+
+A note on datasets you render yourself: data/generate_synthetic_dataset.py is
+MIT-licensed under Part A, but the Replica scenes and Google Scanned Objects
+assets it reads are not ours, and any dataset you render from them is governed
+directly by the terms in Part D — not by this file.
+
+
+======================================================================
+PART A — SOURCE CODE
+======================================================================
+
+MIT License
+
+Copyright (c) 2026 The SubPixR Authors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+======================================================================
+PART B — MODEL WEIGHTS
+======================================================================
+
+The trained model files listed under SCOPE above are licensed under the
+PolyForm Noncommercial License 1.0.0, reproduced in full below. For those
+files, "the software" in the license text below means those model files.
+
+The following line is the notice referred to by the "Notices" section of that
+license. Anyone who passes on the model must pass this line on with it:
+
+Required Notice: SubPixR model weights, Copyright 2026 The SubPixR Authors (https://github.com/asergiu-ubb/SubPixR). Trained on renders of the Replica dataset; noncommercial research use only.
+
+The license text below is reproduced unmodified. The "Yoyodyne, Inc." line in
+it is part of the standard text — an example of the notice format, not our
+copyright notice.
+
+----------------------------------------------------------------------
+
+# PolyForm Noncommercial License 1.0.0
+
+<https://polyformproject.org/licenses/noncommercial/1.0.0>
+
+## Acceptance
+
+In order to get any license under these terms, you must agree to them as both strict obligations and conditions to all your licenses.
+
+## Copyright License
+
+The licensor grants you a copyright license for the software to do everything you might do with the software that would otherwise infringe the licensor's copyright in it for any permitted purpose.  However, you may only distribute the software according to [Distribution License](#distribution-license) and make changes or new works based on the software according to [Changes and New Works License](#changes-and-new-works-license).
+
+## Distribution License
+
+The licensor grants you an additional copyright license to distribute copies of the software.  Your license to distribute covers distributing the software with changes and new works permitted by [Changes and New Works License](#changes-and-new-works-license).
+
+## Notices
+
+You must ensure that anyone who gets a copy of any part of the software from you also gets a copy of these terms or the URL for them above, as well as copies of any plain-text lines beginning with `Required Notice:` that the licensor provided with the software.  For example:
+
+> Required Notice: Copyright Yoyodyne, Inc. (http://example.com)
+
+## Changes and New Works License
+
+The licensor grants you an additional copyright license to make changes and new works based on the software for any permitted purpose.
+
+## Patent License
+
+The licensor grants you a patent license for the software that covers patent claims the licensor can license, or becomes able to license, that you would infringe by using the software.
+
+## Noncommercial Purposes
+
+Any noncommercial purpose is a permitted purpose.
+
+## Personal Uses
+
+Personal use for research, experiment, and testing for the benefit of public knowledge, personal study, private entertainment, hobby projects, amateur pursuits, or religious observance, without any anticipated commercial application, is use for a permitted purpose.
+
+## Noncommercial Organizations
+
+Use by any charitable organization, educational institution, public research organization, public safety or health organization, environmental protection organization, or government institution is use for a permitted purpose regardless of the source of funding or obligations resulting from the funding.
+
+## Fair Use
+
+You may have "fair use" rights for the software under the law. These terms do not limit them.
+
+## No Other Rights
+
+These terms do not allow you to sublicense or transfer any of your licenses to anyone else, or prevent the licensor from granting licenses to anyone else.  These terms do not imply any other licenses.
+
+## Patent Defense
+
+If you make any written claim that the software infringes or contributes to infringement of any patent, your patent license for the software granted under these terms ends immediately. If your company makes such a claim, your patent license ends immediately for work on behalf of your company.
+
+## Violations
+
+The first time you are notified in writing that you have violated any of these terms, or done anything with the software not covered by your licenses, your licenses can nonetheless continue if you come into full compliance with these terms, and take practical steps to correct past violations, within 32 days of receiving notice.  Otherwise, all your licenses end immediately.
+
+## No Liability
+
+***As far as the law allows, the software comes as is, without any warranty or condition, and the licensor will not be liable to you for any damages arising out of these terms or the use or nature of the software, under any kind of legal claim.***
+
+## Definitions
+
+The **licensor** is the individual or entity offering these terms, and the **software** is the software the licensor makes available under these terms.
+
+**You** refers to the individual or entity agreeing to these terms.
+
+**Your company** is any legal entity, sole proprietorship, or other kind of organization that you work for, plus all organizations that have control over, are under the control of, or are under common control with that organization.  **Control** means ownership of substantially all the assets of an entity, or the power to direct its management and policies by vote, contract, or otherwise.  Control can be direct or indirect.
+
+**Your licenses** are all the licenses granted to you for the software under these terms.
+
+**Use** means anything you do with the software requiring one of your licenses.
+
+
+======================================================================
+PART C — THIRD-PARTY CODE INCLUDED IN THIS REPOSITORY
+======================================================================
+
+eval/tapvid_metrics.py and eval/transforms.py are adapted from the official
+TAP-Vid evaluation code (https://github.com/google-deepmind/tapnet),
+Copyright Google LLC, licensed under the Apache License, Version 2.0:
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Their Apache headers are retained in the files and continue to govern them.
+They are not covered by Part A. If you redistribute them, keep the headers.
+
+
+======================================================================
+PART D — DATA PROVENANCE AND EVALUATION DEPENDENCIES
+======================================================================
+
+1. Training data (the basis of the Part B restriction)
+----------------------------------------------------------------------
+
+The synthetic training set produced by data/generate_synthetic_dataset.py is
+rendered from two third-party asset collections:
+
+  * Replica Dataset — https://github.com/facebookresearch/Replica-Dataset
+    Replica Research Terms: non-commercial research or educational use only,
+    and that restriction carries over to derivative works, including trained
+    models.
+
+  * Google Scanned Objects — https://app.gazebosim.org/GoogleResearch
+    CC BY 4.0. Attribution: Downs et al., "Google Scanned Objects: A
+    High-Quality Dataset of 3D Scanned Household Items", ICRA 2022.
+
+checkpoints/best_model.pth was trained on renders of these assets. Its
+noncommercial restriction is independent of the license we grant in Part B and
+cannot be waived by us.
+
+2. Pretrained backbone
+----------------------------------------------------------------------
+
+The encoder is initialised from torchvision's ImageNet-pretrained ResNet-34
+(torchvision, BSD-3-Clause). ImageNet imagery itself is distributed for
+non-commercial research use.
+
+3. Evaluation dependencies (not redistributed here)
+----------------------------------------------------------------------
+
+The evaluation scripts drive third-party trackers, matchers and refiners that
+you clone and download separately, each under its own license. See the tables
+in README.md for the upstream repositories. Notable terms:
+
+  * SuperGlue (magicleap/SuperGluePretrainedNetwork) — weights are released
+    under a license restricting use to non-commercial research; obtain them
+    from upstream under those terms.
+  * CoTracker3, TAPIR, LocoTrack, LightGlue, DISK, ALIKED, LoFTR,
+    ASpanFormer, S2DNet, Patch2Pix, COTR, CAPS, glue-factory — see each
+    upstream repository.
+
+4. Benchmark datasets
+----------------------------------------------------------------------
+
+TAP-Vid (DAVIS / Kinetics / RGB-Stacking), HPatches, MegaDepth and ScanNet are
+obtained from their maintainers under their own terms. ScanNet in particular
+requires signing a terms-of-use agreement.
